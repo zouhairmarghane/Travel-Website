@@ -1,0 +1,171 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #333;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  z-index: 200;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(
+    to bottom,
+    rgb(0, 96, 86),
+    rgba(238, 130, 238, 0)
+  );
+}
+
+.nav-container {
+  display: flex;
+}
+
+nav a {
+  color: white;
+  display: block;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 0 15px;
+  font-weight: 300;
+  visibility: hidden;
+  position: relative;
+  transition: width 0.5s;
+  padding: 0;
+}
+
+nav a::before {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  transition: width 0.3s;
+}
+
+nav a:hover:before {
+  width: 100%;
+}
+
+nav img {
+  width: 40px;
+  visibility: hidden;
+}
+
+.home {
+  width: 100%;
+  height: 100vh;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.603);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+}
+
+video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.home-content {
+  width: 600px;
+  margin: 0 auto;
+  position: relative;
+  top: 150px;
+  color: white;
+  z-index: 150;
+}
+
+.home-content h1 {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 1.1;
+  visibility: hidden;
+  position: relative;
+}
+.home-content h1::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5%;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.home-content h1::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5%;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.home-content .middle-line {
+  height: 0px;
+  width: 2px;
+  background: #fff;
+  margin: 40px auto;
+  position: relative;
+}
+
+.home-content img {
+  width: 75px;
+  fill: white;
+  display: block;
+  margin: 0 auto;
+  visibility: hidden;
+}
+.home-content button {
+  display: block;
+  font-size: 18px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background: transparent;
+  color: white;
+  margin: 50px auto 0;
+  padding: 12px 20px;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+/* nav img:nth-child(1) {
+    margin-right: auto;
+    margin-left: 20px;
+  } */
+
+/* nav img:nth-child(3) {
+    margin-right: auto;
+    margin-left: 20px;
+  } */
